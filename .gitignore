@@ -6,6 +6,7 @@
 *.tfstate.*
 # aws key
 EC2_Instance Creation/aws.pem
+*.pem
 
 # Crash log files
 crash.log
