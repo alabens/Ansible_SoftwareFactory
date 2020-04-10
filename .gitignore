@@ -4,6 +4,8 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+# aws key
+*.pem
 
 # Crash log files
 crash.log
