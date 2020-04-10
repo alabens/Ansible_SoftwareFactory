@@ -4,35 +4,18 @@ resource "aws_instance" "amazonLinux" {
  
 
   # the VPC subnet
-  subnet_id = "vpc-089fd0bf9d82f2c66"
+  subnet_id = aws_subnet.MySubnet-public.id
 
   # the security group
-  vpc_security_group_ids = ["sg-00a5cac71975f122d0"]
+  vpc_security_group_ids = [aws_security_group.MySecurityGroup.id]
 
   # the public SSH key
   key_name = "aws"
   
-  # the role 
-  iam_instance_profile= "${aws_iam_instance_profile.s3-mybucket-role.name}"
-
-  
   tags= {
-      Name= "task2_Ansible"
-}
-}
-resource "aws_ebs_volume" "ebs-volume-1" {
-  availability_zone = "us-east-1a"
-  size              = 20
-  type              = "gp2"
-  tags = {
-    Name = "extra volume data"
-  }
+      Name= "sprint2_Automated"
 }
 
-resource "aws_volume_attachment" "ebs-volume-1-attachment" {
-  device_name = "/dev/xvdh"
-  volume_id   = aws_ebs_volume.ebs-volume-1.id
-  instance_id = aws_instance.amazonLinux.id
 }
 
 
