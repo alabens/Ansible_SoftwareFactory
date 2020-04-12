@@ -1,0 +1,30 @@
+---
+features:
+  mysql: False
+  postgresql: True
+  
+secure:
+  not_working: True
+sonar_password: 'admin'
+
+sonarrunner_zipfile: 'sonar-runner-dist-2.4.zip'
+sonarrunner_url: 'http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.4/sonar-runner-dist-2.4.zip'
+
+sonar_plugins:
+
+
+#  - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-jira-plugin/1.2/sonar-jira-plugin-1.2.jar'  
+# Platforms
+  
+ # - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/javascript/sonar-javascript-plugin/2.2/sonar-javascript-plugin-2.2.jar'
+  #- 'http://downloads.sonarsource.com/plugins/org/codehaus/sonar-plugins/python/sonar-python-plugin/1.5/sonar-python-plugin-1.5.jar'
+ # - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/xml/sonar-xml-plugin/1.2/sonar-xml-plugin-1.2.jar'
+
+# Analysis
+  
+ # - 'http://downloads.sonarsource.com/plugins/org/codehaus/sonar-plugins/java/sonar-checkstyle-plugin/2.3/sonar-checkstyle-plugin-2.3.jar'
+ # - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-cobertura-plugin/1.6.3/sonar-cobertura-plugin-1.6.3.jar'
+ # - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/java/sonar-findbugs-plugin/3.1/sonar-findbugs-plugin-3.1.jar'
+
+# Reporting
+ # - 'http://dist.sonarsource.com/oss/org/codehaus/sonar-plugins/sonar-build-breaker-plugin/1.1/sonar-build-breaker-plugin-1.1.jar'

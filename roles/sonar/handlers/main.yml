@@ -1,0 +1,9 @@
+---
+# Sonar service operations
+- name: 'start sonar'
+  service: name=sonar state=started
+  tags:
+    - init
+
+- name: 'restart sonar'
+  service: name=sonar state=restarted

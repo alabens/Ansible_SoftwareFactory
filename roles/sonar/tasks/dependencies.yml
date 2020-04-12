@@ -1,0 +1,10 @@
+---
+
+- name: 'make sure sonar packages are installed'
+  apt: name={{item}} state=present
+  when: ansible_os_family == "Debian"
+  with_items: sonar_dependencies
+  #notify: restart sonar
+  
+#- name: 'Ensure sonar is running'
+#  service: name=sonar state=started

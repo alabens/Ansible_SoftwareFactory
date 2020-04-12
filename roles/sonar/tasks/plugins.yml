@@ -1,0 +1,13 @@
+---
+- name: 'make sure sonar plugins are installed'
+  get_url: url={{item}}
+            owner=sonar group=sonar mode=0644
+            dest=/opt/sonar/extensions/plugins
+            timeout=100
+  retries: 3
+  with_items: sonar_plugins
+ # notify:
+ #  - 'restart sonar'
+   
+#- name: 'Ensure that sonar is started'  
+#  service: name=sonar state=started

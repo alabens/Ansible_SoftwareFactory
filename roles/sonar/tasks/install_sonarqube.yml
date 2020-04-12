@@ -1,7 +1,5 @@
 ---
-- hosts: sprint2
-  become: yes
-  tasks: 
+
 
         #SonarRunner
         - name: Download and expand sonar-runner.
@@ -47,3 +45,6 @@
             src: /home/ubuntu/sonar/bin/linux-x86-64/sonar.sh
             dest: /etc/init.d/sonar
             state: link
+          notify:
+              - 'restart sonar'
+   

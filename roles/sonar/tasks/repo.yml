@@ -1,0 +1,7 @@
+---
+- name: 'get the repo for Sonar'
+  get_url: url={{sonar_repo}}
+             owner=root group=root mode=0700
+             dest=/home/ubuntu
+  when: ansible_os_family == "Debian"
+  retries: 300

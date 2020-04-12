@@ -1,6 +1,6 @@
 resource "aws_instance" "amazonLinux" {
   ami           = "ami-07ebfd5b3428b6f4d"
-  instance_type = "t2.medium"
+  instance_type = "t2.small"
  
 
   # the VPC subnet
@@ -11,6 +11,9 @@ resource "aws_instance" "amazonLinux" {
 
   # the public SSH key
   key_name = "aws"
+
+  # the role 
+  iam_instance_profile= "${aws_iam_instance_profile.s3-mybucket-role.name}"
   
   tags= {
       Name= "sprint2_Automated"
