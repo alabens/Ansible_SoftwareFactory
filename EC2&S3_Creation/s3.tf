@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "mybucket-c29df123" {
   bucket = "mybucket-c29df123"
-  acl    = "private"
+  acl    = "public"
   force_destroy  = "true"
 
   tags = {
