@@ -2,5 +2,4 @@
 - hosts: sprint2
   become: yes
   roles:
-     #- ansible-role-sonarqube
      - sonarqube
