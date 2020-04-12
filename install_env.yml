@@ -18,6 +18,6 @@
      - git
      - nginx
      - postgresql
-     - python3-pip
+     - awscli
      - unzip
      
